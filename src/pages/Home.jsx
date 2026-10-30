@@ -1,20 +1,18 @@
-import React from "react";
+import React from 'react';
 import Hero from '../components/Sections/Hero';
-import About from '../components/Sections/About'
-import About from '../components/Sections/WeorkAreas'
-import Contact from "../components/Sections/Contact";
-
+import About from '../components/Sections/About';
+import WorkAreas from '../components/Sections/WorkAreas';
+import Contact from '../components/Sections/Contact';
 
 const Home = () => {
-    return (
-        <>
-            <Hero />
-            <About />
-            <WeorkAreas />
-            <Contact />
-
-        </>
-
-    );
-
+  return (
+    <main>
+      <Hero />
+      <About />
+      <WorkAreas />
+      <Contact />
+    </main>
+  );
 };
+
+export default Home;

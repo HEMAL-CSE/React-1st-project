@@ -1,34 +1,31 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '../components/Layout/Navbar';
-import Footer from '../components/Layout/Footer';
+import Navbar from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer';
 import Home from './pages/Home';
-import AboutPage from './pages/AboutPage';
-import WorkPage from './pages/WorkPage';
-import EventPage from './pages/EventPage';
-import LeatherPage from './pages/LeatherPage';
-import ContactPage from './pages/ContactPage';
-
-
-
+// Jodi onno kono page thake (jemon: About.jsx, Contact.jsx pages folder e), tabe ekhane import kore deben:
+// import About from './pages/About'; 
+// import Contact from './pages/Contact';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white flex flex-col">
+      <div className="min-h-screen flex flex-col justify-between bg-slate-900 text-slate-100">
+        {/* Navbar sobsomoy sob page e dekhabe */}
         <Navbar />
-        <main className="flex-grow pt-16 md:pt-20">
+
+        {/* Dynamic Routes */}
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/work" element={<WorkPage />} />
-            <Route path="/event" element={<EventPage />} />
-            <Route path="/leather" element={<LeatherPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-
-            
+            {/* 
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} /> 
+            */}
           </Routes>
-        </main>
+        </div>
+
+        {/* Footer sobsomoy sob page e dekhabe */}
         <Footer />
       </div>
     </Router>
